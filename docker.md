@@ -2,6 +2,7 @@
 
 1. follow tutorial found here: https://docs.docker.com/engine/install/debian/#install-using-the-repository
 
+```
 # Add Docker's official GPG key:
 sudo apt-get update
 sudo apt-get install ca-certificates curl
@@ -17,10 +18,11 @@ echo
 sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
 
 2. attempt to verify installation:
 
-sudo docker run hello-world
+`sudo docker run hello-world`
 
 (you will likely get an error about the deamon not running.)
 
@@ -29,32 +31,32 @@ sudo docker run hello-world
 
 try this, though it probably wont work:
 
-sudo systemctl start docker
+`sudo systemctl start docker`
 
 Alternatively, run this in a terminal then just work in another:
 
-sudo dockerd
+`sudo dockerd`
 (this one should work)
 
 ===============================
 
 #Useful commands for docker
 
-* docker images
+* `docker images`
     * shows list of built images
-* docker build -t [name] [location] 
+* `docker build -t [name] [location]`
     * builds a docker image, called [name], & with the dockerfile located at [location]
-    * e.g. docker build -t backend .
+    * e.g. `docker build -t backend .`
         * this builds an image called backend, using the dockerfile in the current directory
-* docker run -p [in port:out port] --name [image name] -d [instance name]
+* `docker run -p [in port:out port] --name [image name] -d [instance name]`
     * gets the built image and runs it, setting the ports to the defined ports and sets the running instance to the defined instance name
-    * e.g. docker run -p [3306:3306] --name backend -d backend
-* docker stop [instance name]
+    * e.g. `docker run -p [3306:3306] --name backend -d backend`
+* `docker stop [instance name]`
     * stops the named instance, note different to the image name
-* docker rm/remove [container]
+* `docker rm/remove [container]`
     * deletes the container/instance
-* docker start [container name]
+* `docker start [container name]`
     * restarts stopped instance
-* docker container ls -a 
+* `docker container ls -a`
     * shows a list of containers/instances
 

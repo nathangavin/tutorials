@@ -4,10 +4,12 @@ use mariadb-server & mariadb-client
 
 command:
 
+```
 mariadb --host 127.0.0.1
             --port 3306
             --user admin
             --password
+```
 
 It should then ask for the password, then open the db interface.
 
