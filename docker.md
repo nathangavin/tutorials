@@ -50,7 +50,7 @@ Alternatively, run this in a terminal then just work in another:
         * this builds an image called backend, using the dockerfile in the current directory
 * `docker run -p [in port:out port] --name [image name] -d [instance name]`
     * gets the built image and runs it, setting the ports to the defined ports and sets the running instance to the defined instance name
-    * e.g. `docker run -p [3306:3306] --name backend -d backend`
+    * e.g. `docker run -p 3306:3306 --name backend -d backend`
 * `docker stop [instance name]`
     * stops the named instance, note different to the image name
 * `docker rm/remove [container]`
